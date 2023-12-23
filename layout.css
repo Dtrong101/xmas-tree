@@ -268,16 +268,32 @@ h1 {
 
 .xmas {
   position: relative;
-  left: 370px;
+  left: 100px; /* Đặt giá trị left để nút nằm sát bên trái */
   top: -80px;
   z-index: 99;
 }
 
-@media only screen and (max-width: 600px) {
+/* Styles for screens up to 425 pixels wide */
+@media only screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+  }
+
   body {
     font-size: 14px;
     position: relative;
-    top: 400px;
-    right: 5px;
+    top: 0;
+    right: 0;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .xmas {
+    position: relative;
+    left: 0; /* Reset giá trị left để nút nằm bên trái và không áp dụng transform */
+    transform: none;
+    margin-top: 10px;
   }
 }
